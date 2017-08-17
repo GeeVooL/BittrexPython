@@ -42,14 +42,14 @@ class Bittrex(object):
         """
 
         nonce = datetime.datetime.now().timestamp()
-        base_params = {'apikey': self.api_key, 'nonce': nonce}
+        uri += '?apikey=%s&nonce=%s' % (self.api_key, nonce)
         api_sign = hmac.new(self.api_secret.encode(), uri.encode(), hashlib.sha512).hexdigest()
         header_data = {'apisign': api_sign}
         
         if params is not None:
             base_params.update(params)
         
-        r = requests.get(uri, headers=header_data, params=base_params)
+        r = requests.get(uri, headers=header_data, params=params)
         r.raise_for_status()
         return r
 
