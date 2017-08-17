@@ -1,6 +1,6 @@
 # Bittrex RESTful API - Python 3 module
 
-API wrapper for Bittrex API v1.1. Full API documentation available here:
+API wrapper for Bittrex API v1.1. Software under MIT license. Full API documentation available here:
 
 https://bittrex.com/home/api
 
