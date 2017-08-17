@@ -17,6 +17,6 @@ bittrex = Bittrex('<api-key>', '<api-secret>')
 ## Methods' names
 Methods name convention is based on API documentation with underscore dividing each word. Example:
 ```
-getmarketsummary?market=btc-ltc --> bittrex.get_market_summary('btc-ltc')
+/public/getmarketsummary?market=btc-ltc --> bittrex.get_market_summary('btc-ltc')
 ```
 
